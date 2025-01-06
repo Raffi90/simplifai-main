@@ -1,1 +1,146 @@
+App.jsx
+---------------------------------------------------------------------------------------
+import React from 'react'
+
+import './App.css'
+
+function App() {
+
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+
+  }
+  return (
+    
+<div>
+
+
+  <div className="topnav">
+    <a href="#home" className="active">
+</a>
+    <div id="myLinks">
+      <a href="#1subject">נושא 1</a>
+      <a href="#2subject">נושא 2</a>
+      <a href="#3subject">נושא 3</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onClick={myFunction}>
+      <i className="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div id="container">
+    </div>
+    <div id="typing">
+      <input id="message-input" placeholder="Type......."/>
+      <button> Send</button>
+    </div>
+   
+
+  </div>
+
+
+  )
+}
+
+export default App
+
+
+
+-------------------------------------------------------
+App.css
+--------------------------------------------------------------------------
+
+
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  background-color: gray;
+  width: fit-content;
+
+  padding: 28px 26px;
+
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+
+}
+
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  top: 0;
+  left:0;
+}
+
+
+.active {
+    background-color: white;
+
+  color: white;
+}
+
+#typing {
+  margin-top: 210px;
+  background: #efefef; 
+  padding: 10px;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  width: 290px;
+  margin-right: 10px;
+}
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color:white;
+  cursor: pointer;
+}
+
+.message {
+  border-radius: 10px;
+  padding: 10px;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.incoming {
+  background: #007bff;
+  color: white;
+}
+
+
+
+#container {
+  width: 400px;
+  border: 1px solid #efefef;
+}
+
+
 
